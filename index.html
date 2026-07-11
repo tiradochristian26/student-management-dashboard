@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <title>Student Management Dashboard</title>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto px-5">
+        <header class="flex justify-between items-center p-3">
+            <img src="./assets/images/logo/student-svgrepo-com.svg" alt="Student Management Dashboard Logo" class="h-10" />
+            <h1 class="font-bold text-3xl">Student Management Dashboard</h1>
+            <button
+                class="px-3 cursor-pointer py-1 rounded-sm bg-amber-400 text-white font-medium hover:bg-amber-600 transition"
+                type="button">
+                Add Student
+            </button>
+        </header>
+
+        <main class=" space-y-10">
+            <section id="statistic_section" class="mt-5 border p-2 rounded-md">
+               
+                    <h2 class="capitalize text-2xl font-medium">statistics</h2>
+            
+                <div class="w-full flex justify-center items-center ">
+                    <div class="w-fit p-2 grid grid-cols-4 gap-3">
+                        <div
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            <h2 class="text-lg font-semibold">Total Students</h2>
+                            <p id="">0</p>
+                            <p id="" class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt voluptatibus labore tenetur eius corporis officiis soluta, officia, dicta eum quidem corrupti veniam vero deserunt dolorum nobis non amet natus.</p>
+                        </div>
+
+                         <div
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            <h2 class="text-lg font-semibold">Active Students</h2>
+                            <p id="">0</p>
+                            <p id=" " class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt voluptatibus labore tenetur eius corporis officiis soluta, officia, dicta eum quidem corrupti veniam vero deserunt dolorum nobis non amet natus.</p>
+                        </div>
+
+                         <div
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            <h2 class="text-lg font-semibold">Average GPA</h2>
+                            <p id="">0</p>
+                            <p id="" class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt voluptatibus labore tenetur eius corporis officiis soluta, officia, dicta eum quidem corrupti veniam vero deserunt dolorum nobis non amet natus.</p>
+                        </div>
+
+                         <div
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            <h2 class="text-lg font-semibold">Courses</h2>
+                            <p id="">0</p>
+                            <p id="" class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt voluptatibus labore tenetur eius corporis officiis soluta, officia, dicta eum quidem corrupti veniam vero deserunt dolorum nobis non amet natus.</p>
+                        </div>
+                </div>
+            </section>
+
+            <section id="controls" class="border p-2 rounded-md">
+                
+                    <h2 class="capitalize text-2xl font-medium">controls</h2>
+              
+                <div class=" p-2 flex justify-center items-center gap-2">
+                    <div>
+                        <label for="search_student" class=" block">Search student</label>
+                        <input type="text" placeholder="Search Student" id="search_student"
+                            class="min-w-70 border px-2 py-1 rounded-md outline-0 focus:border-amber-600 transition" />
+                    </div>
+
+                    <div>
+                        <label for="course" class="block">Course</label>
+                        <select name="course" id="course"
+                            class="min-w-70 border px-2 py-1 rounded-md outline-0 focus:border-amber-600 transition">
+                            <optgroup label="Science">
+                                <option value="bio101">Bio101</option>
+                                <option value="chem01">Chem01</option>
+                            </optgroup>
+                            <optgroup label="math">
+                                <option value="algebra101">Algebra101</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="sort" class="block">Sort Student</label>
+                        <select name="sort"  id="sort"
+                            class="min-w-70 border px-2 py-1 rounded-md outline-0 focus:border-amber-600 transition">
+                            <option value="Name">Name (A-Z)</option>
+                            <option value="reverseName">Name (Z-A)</option>
+                            <option value="grade">Grade</option>
+                            <option value="recentlyAdded">Recently Added</option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="Student_Section" class="border p-2 rounded-md">
+
+                    <h2 class="capitalize text-2xl font-medium">Students</h2>
+                
+                <div class="  flex justify-center items-center ">
+                    <div class="grid text-center">
+                        <h2 class="font-semibold text-lg">No Students Yet</h2>
+                        <p class="text-gray-600 ">Add your first student to get started.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
