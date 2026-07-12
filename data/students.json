@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "name": "Christian",
+    "email": "christianTirado@gmail.com",
+    "course": "BSIT",
+    "year": 4,
+    "gpa": 1.50,
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "name": "Maria Santos",
+    "email": "mariasantos@gmail.com",
+    "course": "BSCS",
+    "year": 3,
+    "gpa": 1.75,
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "name": "John Reyes",
+    "email": "johnreyes@gmail.com",
+    "course": "BSIT",
+    "year": 2,
+    "gpa": 2.25,
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "name": "Angela Cruz",
+    "email": "angelacruz@gmail.com",
+    "course": "BSBA",
+    "year": 4,
+    "gpa": 1.25,
+    "status": "Graduated"
+  },
+  {
+    "id": 5,
+    "name": "Mark Villanueva",
+    "email": "markvillanueva@gmail.com",
+    "course": "BSCE",
+    "year": 1,
+    "gpa": 2.50,
+    "status": "Active"
+  },
+  {
+    "id": 6,
+    "name": "Kristine Bautista",
+    "email": "kristinebautista@gmail.com",
+    "course": "BSIT",
+    "year": 3,
+    "gpa": 1.90,
+    "status": "Inactive"
+  },
+  {
+    "id": 7,
+    "name": "Paolo Mendoza",
+    "email": "paolomendoza@gmail.com",
+    "course": "BSN",
+    "year": 4,
+    "gpa": 1.60,
+    "status": "Active"
+  },
+  {
+    "id": 8,
+    "name": "Samantha Ramos",
+    "email": "samantharamos@gmail.com",
+    "course": "BSA",
+    "year": 2,
+    "gpa": 2.10,
+    "status": "Active"
+  },
+  {
+    "id": 9,
+    "name": "Daniel Torres",
+    "email": "danieltorres@gmail.com",
+    "course": "BSIT",
+    "year": 4,
+    "gpa": 1.45,
+    "status": "Active"
+  },
+  {
+    "id": 10,
+    "name": "Bianca Flores",
+    "email": "biancaflores@gmail.com",
+    "course": "BSEd",
+    "year": 3,
+    "gpa": 1.80,
+    "status": "Active"
+  }
+  
+
+]

@@ -8,8 +8,8 @@
     <title>Student Management Dashboard</title>
 </head>
 
-<body>
-    <div class="max-w-7xl mx-auto px-5">
+<body >
+    <div class="max-w-7xl mx-auto px-2">
         <header class="flex justify-between items-center p-3">
             <img src="./assets/images/logo/student-svgrepo-com.svg" alt="Student Management Dashboard Logo"
                 class="h-15" />
@@ -27,9 +27,9 @@
                 <h2 class="capitalize text-2xl font-medium">statistics</h2>
 
                 <div class="w-full flex justify-center items-center ">
-                    <div class="w-fit p-2 grid grid-cols-4 gap-3 ">
+                    <div class="w-fit p-2 grid grid-cols-4 gap-6 ">
                         <div
-                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2 shadow-md space-y-8 ">
                             <h2 class="text-lg font-semibold">Total Students</h2>
                             <p id="">0</p>
                             <p id="" class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet consectetur
@@ -39,7 +39,7 @@
                         </div>
 
                         <div
-                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2 shadow-md  space-y-8 ">
                             <h2 class="text-lg font-semibold">Active Students</h2>
                             <p id="">0</p>
                             <p id=" " class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet
@@ -49,7 +49,7 @@
                         </div>
 
                         <div
-                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  shadow-md  space-y-8 ">
                             <h2 class="text-lg font-semibold">Average GPA</h2>
                             <p id="">0</p>
                             <p id="" class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet consectetur
@@ -59,7 +59,7 @@
                         </div>
 
                         <div
-                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  border border-gray-400  space-y-8 ">
+                            class="min-w-50 min-h-50 max-w-60 max-h-50 rounded-lg p-2  shadow-md  space-y-8 ">
                             <h2 class="text-lg font-semibold">Courses</h2>
                             <p id="">0</p>
                             <p id="" class=" text-sm text-gray-600 line-clamp-3"> Lorem ipsum dolor sit amet consectetur
@@ -109,41 +109,17 @@
             </section>
 
             <section id="Student_Section" class="border p-2 rounded-md">
-
                 <h2 class="capitalize text-2xl font-medium">Students</h2>
-
-                <!-- <div class="grid text-center">
-                        <h2 class="font-semibold text-lg">No Students Yet</h2>
-                        <p class="text-gray-600 ">Add your first student to get started.</p>
-                    </div> -->
-
-                <div class="w-fit p-2 grid grid-cols-4 gap-3 ">
-                    <div
-                        class="min-w-60 min-h-50 max-w-60 max-h-fit rounded-lg p-2  border border-gray-400 space-y-3   ">
-                        <img src="./assets/images/logo/student-svgrepo-com.svg" alt="Profile picture of Christian Tirado" class="h-12">
-                        <div>
-                            <h3 class="font-medium text-xl">Christian Tirado</h3>
-                            <p class=" text-gray-500">Tiradochristian@gmail.com</p>
-                        </div>
-                        <div>
-                            <p>Course: <strong>BSIT</strong></p>
-                            <p>Year: <strong>4</strong></p>
-                            <p>GPA: <strong>1.50</strong></p>
-                            <p class="flex gap-2 ">Status: <strong class="text-green-600 flex  items-center gap-1"><img src="./assets/images/status/icons8-round-67.png" alt="status" class="h-2">Active</strong></p>
-                        </div>
-                        <div class=" w-full flex gap-1 ">
-                            <button
-                                class="bg-blue-600 rounded-sm flex-1 font-medium text-white cursor-pointer hover:bg-blue-800 py-1" type="button">Edit</button>
-                            <button
-                                class=" border border-red-600 text-red-600 rounded-sm flex-1 cursor-pointer hover:bg-red-600 transition hover:text-white py-1 " type="button">Delete</button>
-                        </div>
-                    </div>
-
-
+                <div class=" flex justify-center items-center">
+                    <div class="w-fit p-2 grid grid-cols-5 gap-3 " id="student_grid">
+                </div>
+                </div>
             </section>
 
         </main>
     </div>
+    <button id="fetch_data">fetch</button>
 </body>
+<script type="module" src="./js/modules/ui.js"></script>
 
 </html>
