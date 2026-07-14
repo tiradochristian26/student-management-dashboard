@@ -1,10 +1,10 @@
-import { fetchData } from "../../../upSkill/js/modules/profile"
+import { FetchStudentData } from "./students.js"
 
-export const filterStudents = async (value) => {
-   const students = await fetchData()
-    const filtered=  students.filter(student => {
-    const trimed =  student.name.trim().toLowerCase()
-    return trimed.includes(value.trim().toLowerCase())
+export const filterStudents = (data,value) => {
+
+    const filtered=  data.filter(student => {
+    const trimmed =  student.name.trim().toLowerCase()
+    return trimmed.includes(value.trim().toLowerCase())
 
 })
 
