@@ -1,36 +1,49 @@
-import { FetchStudentData } from "./students.js";
-import { createStudent } from "../components/studentCard.js";   
+import { fetchData } from "./students.js";
+import { createStudent } from "../components/studentCard.js";
 import { filterStudents } from "./filter.js";
-const container = document.querySelector('#student_grid')
-const search_input = document.querySelector('#search_student')
-let students = []
+import { sort } from "./sort.js";
+const container_grid = document.querySelector("#student_grid")
+const searchEngine = document.querySelector("#search_student")
+const course = document.getElementById('course')
+const sortvalue = document.getElementById('sort')
 
-const fetchStudents = async () => {
- const studentData = await FetchStudentData()
-  students = studentData     
-  return studentData
 
+let studentData =[]
+
+const fetchedData = async () => {
+    const data =  await fetchData()
+     studentData = data
 }
 
-const renderStudent = (students) => {
-    const cards = students.map(student => {
-        return createStudent(student)
+const renderData = (students) => {
+    const cards = students.map(profile => {
+        return createStudent(profile)
     });
-     container.innerHTML = cards.join("")
+
+    container_grid.innerHTML = cards.join("")
 }
 
-const searchStudent =  (studentList) => {
-search_input.addEventListener('input', (e) => {
-const filteredStudent = filterStudents(studentList,e.target.value)
-    renderStudent(filteredStudent)
-     
-})}
+const  initializeSearch =(filteredData) => {
+        searchEngine.addEventListener('input', (e) => {
+            const filtered = filterStudents(filteredData,e.target.value)
+             renderData(filtered)
+        })
+} 
+
+const sortStudent = (students) => {
+    sortvalue.addEventListener('change',(e) => {
+        const sortedStudents = sort(students,e.target.value)
+        renderData(sortedStudents)
+               
+    })
+}
 
 const init = async () => {
- await  fetchStudents()
-renderStudent(students); 
-searchStudent(students)
-
+    await fetchedData()
+    renderData(studentData)
+    initializeSearch(studentData)
+    sortStudent(studentData)
 }
 
 init()
+

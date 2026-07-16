@@ -1,4 +1,3 @@
-import { FetchStudentData } from "./students.js"
 
 export const filterStudents = (data,value) => {
 

@@ -85,13 +85,8 @@
                         <label for="course" class="block">Course</label>
                         <select name="course" id="course"
                             class="min-w-70 border px-2 py-1 rounded-md outline-0 focus:border-amber-600 transition">
-                            <optgroup label="Science">
-                                <option value="bio101">Bio101</option>
-                                <option value="chem01">Chem01</option>
-                            </optgroup>
-                            <optgroup label="math">
-                                <option value="algebra101">Algebra101</option>
-                            </optgroup>
+                                <option value="BSIT">Bachelor of Science in Information</option>                      
+                                <option value="BSED">Bachelor of Science in Education</option>
                         </select>
                     </div>
 
@@ -99,10 +94,10 @@
                         <label for="sort" class="block">Sort Student</label>
                         <select name="sort" id="sort"
                             class="min-w-70 border px-2 py-1 rounded-md outline-0 focus:border-amber-600 transition">
-                            <option value="Name">Name (A-Z)</option>
-                            <option value="reverseName">Name (Z-A)</option>
-                            <option value="grade">Grade</option>
-                            <option value="recentlyAdded">Recently Added</option>
+                            <option value="asc">Name (A-Z)</option>
+                            <option value="desc">Name (Z-A)</option>
+                            <option value="gpa-asc">GPA</option>
+                        
                         </select>
                     </div>
                 </div>
@@ -121,5 +116,4 @@
     
 </body>
 <script type="module" src="./js/modules/ui.js"></script>
-
 </html>
