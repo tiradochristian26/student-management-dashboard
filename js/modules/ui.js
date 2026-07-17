@@ -2,9 +2,10 @@ import { fetchData } from "./students.js";
 import { createStudent } from "../components/studentCard.js";
 import { filterStudents } from "./filter.js";
 import { sort } from "./sort.js";
+import { filterByCourse } from "./courseFilter.js";
 const container_grid = document.querySelector("#student_grid")
 const searchEngine = document.querySelector("#search_student")
-const course = document.getElementById('course')
+const courseOption = document.getElementById('course')
 const sortvalue = document.getElementById('sort')
 
 
@@ -38,11 +39,18 @@ const sortStudent = (students) => {
     })
 }
 
+const courseFilter = (students) => {
+    courseOption.addEventListener('change', (e) => {
+            const courses = filterByCourse(students,e.target.value)
+           renderData(courses)
+    })
+}
 const init = async () => {
     await fetchedData()
     renderData(studentData)
     initializeSearch(studentData)
     sortStudent(studentData)
+    courseFilter(studentData)
 }
 
 init()
