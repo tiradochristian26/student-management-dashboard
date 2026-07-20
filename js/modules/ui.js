@@ -13,7 +13,7 @@ let studentData =[]
 
 const fetchedData = async () => {
     const data =  await fetchData()
-     studentData = data
+      studentData = data
 }
 
 const renderData = (students) => {
@@ -24,34 +24,30 @@ const renderData = (students) => {
     container_grid.innerHTML = cards.join("")
 }
 
-const  initializeSearch =(filteredData) => {
-        searchEngine.addEventListener('input', (e) => {
-            const filtered = filterStudents(filteredData,e.target.value)
-             renderData(filtered)
-        })
-} 
+const updateStudents = () => {
+    const searchValue = searchEngine.value
+    const courseValue = courseOption.value
+    const sortValueSelected = sortvalue.value
 
-const sortStudent = (students) => {
-    sortvalue.addEventListener('change',(e) => {
-        const sortedStudents = sort(students,e.target.value)
-        renderData(sortedStudents)
-               
-    })
+
+let result = studentData;
+
+result = filterByCourse(result,courseValue);
+result = filterStudents(result,searchValue);
+result = sort(result,sortValueSelected);
+
+renderData(result)
 }
 
-const courseFilter = (students) => {
-    courseOption.addEventListener('change', (e) => {
-            const courses = filterByCourse(students,e.target.value)
-           renderData(courses)
-    })
-}
 const init = async () => {
     await fetchedData()
     renderData(studentData)
-    initializeSearch(studentData)
-    sortStudent(studentData)
-    courseFilter(studentData)
+    searchEngine.addEventListener('input',updateStudents)
+    courseOption.addEventListener('change',updateStudents)
+    sortvalue.addEventListener('change',updateStudents)
+
 }
+
 
 init()
 
