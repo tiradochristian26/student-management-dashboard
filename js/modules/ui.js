@@ -4,6 +4,25 @@ import { filterStudents } from "./filter.js";
 import { sort } from "./sort.js";
 import { filterByCourse } from "./courseFilter.js";
 import { statistics } from "./statistics.js";
+import { addStudentModal } from "../components/modal.js";
+const app = document.getElementById('app')
+app.innerHTML = addStudentModal()
+
+
+
+const showModal = document.getElementById('show_modal')
+const closeModal = document.getElementById('close_modal')
+const modal = document.getElementById('modal')
+const toggleModal = () => {
+   
+    modal.classList.toggle('hidden')    
+    modal.classList.contains('hidden') ? document.body.style.overflow ='auto': document.body.style.overflow ='hidden'
+}
+showModal.addEventListener('click',toggleModal )
+closeModal.addEventListener('click',toggleModal)
+
+
+
 const container_grid = document.querySelector("#student_grid")
 const searchEngine = document.querySelector("#search_student")
 const courseOption = document.getElementById('course')

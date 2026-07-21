@@ -9,7 +9,7 @@ export const createStudent = (student) => {
                         </div>
                         <div>
                             <p>Course: <strong>${student.course}</strong></p>
-                            <p>Year: <strong>${student.year}</strong></p>
+                            <p>Year: <strong>${student.year} </strong></p>
                             <p>GPA: <strong>${student.gpa}</strong></p>
                             <p class="flex gap-2 ">Status: <strong class="text-green-600 flex  items-center gap-1"><img src="./assets/images/status/icons8-round-67.png" alt="status" class="h-2">${student.status}</strong></p>
                         </div>
