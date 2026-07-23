@@ -7,6 +7,7 @@ import { statistics } from "./statistics.js";
 import { addStudentModal } from "../components/modal.js";
 import { formValidation } from "./validation.js";
 import { createStudentObject } from "../helpers/dataBuilder.js";
+import { generateId } from "../helpers/utils.js";
 // students modal
 const app = document.getElementById('app')
 app.innerHTML = addStudentModal()
@@ -44,7 +45,6 @@ const renderData = (students) => {
     const cards = students.map(profile => {
         return createStudent(profile)
     });
-
     container_grid.innerHTML = cards.join("")
 }
 
@@ -60,13 +60,10 @@ modalForm.addEventListener('submit',(e) =>{
     const isValid = formValidation(fullname,email,course,year,gpa,status)
     if(isValid){
      const newStudent =  createStudentObject(fullname,email,course,year,gpa,status)
-        
+     generateId(studentData)
     }else{
         alert('please fill out all fields with valid value')
     }
-
-    
-    
 })
 
 const renderStatistics = (students) => {
@@ -95,6 +92,7 @@ renderStatistics(result)
 
 const init = async () => {
     await fetchedData()
+
     renderStatistics(studentData)
     renderData(studentData)
     searchEngine.addEventListener('input',updateStudents)
