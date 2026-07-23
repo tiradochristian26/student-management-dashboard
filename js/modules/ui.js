@@ -58,9 +58,18 @@ modalForm.addEventListener('submit',(e) =>{
     const gpa = newForm.get('gpa')
     const  status = newForm.get('status')
     const isValid = formValidation(fullname,email,course,year,gpa,status)
+
     if(isValid){
-     const newStudent =  createStudentObject(fullname,email,course,year,gpa,status)
-     generateId(studentData)
+    const newStudent =  createStudentObject(fullname,email,course,year,gpa,status)
+    const newId = generateId(studentData)
+    const completeStudent ={...newStudent, id:newId}
+    studentData = [...studentData ,completeStudent]
+    renderData(studentData)
+    renderStatistics(studentData)
+    modalForm.reset()
+    toggleModal()
+
+       
     }else{
         alert('please fill out all fields with valid value')
     }
@@ -92,7 +101,6 @@ renderStatistics(result)
 
 const init = async () => {
     await fetchedData()
-
     renderStatistics(studentData)
     renderData(studentData)
     searchEngine.addEventListener('input',updateStudents)

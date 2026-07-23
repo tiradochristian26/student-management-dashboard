@@ -1,7 +1,7 @@
 
-export const createStudentObject = (name,email,course,year,gpa,status) =>{
+export const createStudentObject = (fullname,email,course,year,gpa,status) =>{
     const newStudentData  = {
-            fullname: name,
+            name: fullname,
             email: email,
             course:course,
             year:year,
